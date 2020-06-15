@@ -1,0 +1,182 @@
+[
+    {
+        "type": "title",
+        "text": "Main Menu"
+    },
+    {
+        "text": "Dashboard",
+        "icon": "fas fa-home",
+        "url": "/"
+    },
+    {
+        "text": "Components",
+        "icon": "fas fa-th-large",
+        "active": false,    
+        "submenu": [
+            {
+                "text": "Alert",
+                "url": "/components/alert"
+            },
+            {
+                "text": "Avatar",
+                "url": "/components/avatar"
+            },
+            {
+                "text": "Badge",
+                "url": "/components/badge"
+            },
+            {
+                "text": "Breadcrumb",
+                "url": "/components/breadcrumb"
+            },
+            {
+                "text": "Buttons",
+                "url": "/components/buttons"
+            },
+            {
+                "text": "Card",
+                "url": "/components/card"
+            },
+            {
+                "text": "Checkbox",
+                "url": "/components/checkbox"
+            },
+            {
+                "text": "Dropdown",
+                "url": "/components/dropdown"
+            },
+            {
+                "text": "Input",
+                "url": "/components/input"
+            },
+            {
+                "text": "Modal",
+                "url": "/components/modal"
+            },
+            {
+                "text": "Pagination",
+                "url": "/components/pagination"
+            },
+            {
+                "text": "Progress",
+                "url": "/components/progress"
+            },
+            {
+                "text": "Select",
+                "url": "/components/select"
+            },
+            {
+                "text": "Radio",
+                "url": "/components/radio"
+            }
+        ]
+    },
+    {
+        "text": "Forms",
+        "icon": "far fa-file-alt",
+        "submenu": [
+            {
+                "text": "Advanced Form",
+                "url": "/form/advanced-form"
+            },
+            {
+                "text": "Editor",
+                "url": "/form/editor"
+            }
+        ]
+    },
+    {
+        "text": "Tables",
+        "icon": "fas fa-table",
+        "submenu": [
+            {
+                "text": "Basic Table",
+                "url": "/table/basic"
+            },
+            {
+                "text": "Advanced Table",
+                "url": "/table/advanced"
+            }
+        ]
+    },
+    {
+        "text": "Modules",
+        "icon": "fas fa-plug",
+        "submenu": [
+            {
+                "text": "ChartJS",
+                "url": "/modules/chartjs"
+            },
+            {
+                "text": "Font Awesome",
+                "url": "/modules/font-awesome"
+            },
+            {
+                "text": "Vue Select",
+                "url": "/modules/vue-select"
+            }
+        ]
+    },
+    {
+        "text": "Pages",
+        "icon": "fas fa-file",
+        "submenu": [
+            {
+                "text": "Chat App",
+                "url": "/pages/chat-app"
+            }
+        ]
+    },
+    {
+        "text": "Authentication",
+        "icon": "far fa-user",
+        "submenu": [
+            {
+                "text": "Login",
+                "url": "/auth/login"
+            },
+            {
+                "text": "Login V2",
+                "url": "/auth/login-v2"
+            },
+            {
+                "text": "Register",
+                "url": "/auth/register"
+            },
+            {
+                "text": "Register V2",
+                "url": "/auth/register-v2"
+            },
+            {
+                "text": "Forgot Password",
+                "url": "/auth/forgot-password"
+            },
+            {
+                "text": "Forgot Password V2",
+                "url": "/auth/forgot-password-v2"
+            }
+        ]
+    },
+    {
+        "text": "Errors",
+        "icon": "fas fa-exclamation",
+        "submenu": [
+            {
+                "text": "401",
+                "url": "/error/401"
+            },
+            {
+                "text": "403",
+                "url": "/error/403"
+            },
+            {
+                "text": "404",
+                "url": "/error/404"
+            },
+            {
+                "text": "500",
+                "url": "/error/500"
+            }
+        ]
+    }
+]

@@ -1,0 +1,54 @@
+
+$badge: (
+	'primary': (
+		'color': #fff,
+		'background-color': map-get($theme-colors, 'primary'),
+	),
+	'secondary': (
+		'color': #fff,
+		'background-color': #bec8d1,
+	),
+	'success': (
+		'color': #fff,
+		'background-color': map-get($theme-colors, 'success'),
+	),
+	'danger': (
+		'color': #fff,
+		'background-color': map-get($theme-colors, 'danger'),
+	),
+	'warning': (
+		'color': #fff,
+		'background-color': map-get($theme-colors, 'warning'),
+	),
+	'info': (
+		'color': #fff,
+		'background-color': map-get($theme-colors, 'info'),
+	),
+	'dark': (
+		'color': #fff,
+		'background-color': map-get($theme-colors, 'dark'),
+	),
+	'light': (
+		'color': #333,
+		'background-color': map-get($theme-colors, 'light'),
+	),
+);
+
+
+
+h1 .badge { @apply text-xl }
+h2 .badge { @apply text-lg }
+h3 .badge { @apply text-base }
+h4 .badge { @apply text-sm }
+h5 .badge { @apply text-xs }
+h6 .badge { @apply text-xs }
+
+.badges .badge {
+    @apply mr-2;
+}
+@each $color, $map in $badge {
+    &.badge-#{$color} {
+        color: map-get($map, "color");
+        background-color: map-get($map, "background-color");
+    }
+}

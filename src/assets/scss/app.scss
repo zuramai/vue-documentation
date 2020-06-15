@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+a {
+    transition: all .3s ease;
+    position: relative;
+}
+
+@import "./sidebar";
+
+.navbar {
+    flex: 1;
+}
+.title:before {
+    content: "#";
+    font-weight: 400;
+    margin-left: -35px;
+    position: absolute;
+    font-size: 3rem;
+    color: #ff2d20;
+    opacity: .6;
+}
+.text-content {
+
+}
+
+@tailwind utilities;
+

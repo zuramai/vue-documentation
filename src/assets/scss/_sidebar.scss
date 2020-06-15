@@ -1,0 +1,16 @@
+.sidebar-wrapper {
+    width: 15em;
+    background-color: #F5F5FA;
+    position: sticky;
+    height:100vh;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 999em;
+        height: 100%;
+        background: #F5F5FA;
+        z-index: -2;
+    }
+}

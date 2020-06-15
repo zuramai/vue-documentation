@@ -1,0 +1,93 @@
+[
+    {
+        "text": "Getting Started",
+        "submenu": [
+            {
+                "text": "Installation",
+                "url": "/docs/installation"
+            }
+        ]
+    },
+    {
+        "text": "Integration",
+        "submenu": [
+            {
+                "text": "Laravel Integration",
+                "url": "/docs/laravel-integration"
+            },
+            {
+                "text": "JWT",
+                "url": "/docs/jwt"
+            },
+            {
+                "text": "Auth0",
+                "url": "/docs/auth0"
+            },
+            {
+                "text": "Internationalization",
+                "url": "/docs/i18n"
+            }
+        ]
+    },
+    {
+        "text": "Components",
+        "submenu": [
+            {
+              "text": "Alert",
+              "url": "/docs/components/alert"
+            },
+            {
+              "text": "Avatar",
+              "url": "/docs/components/avatar"
+            },
+            {
+              "text": "Badge",
+              "url": "/docs/components/badge"
+            },
+            {
+              "text": "Breadcrumb",
+              "url": "/docs/components/breadcrumb"
+            },
+            {
+              "text": "Buttons",
+              "url": "/docs/components/buttons"
+            },
+            {
+              "text": "Card",
+              "url": "/docs/components/card"
+            },
+            {
+              "text": "Checkbox",
+              "url": "/docs/components/checkbox"
+            },
+            {
+              "text": "Dropdown",
+              "url": "/docs/components/dropdown"
+            },
+            {
+              "text": "Input",
+              "url": "/docs/components/input"
+            },
+            {
+              "text": "Modal",
+              "url": "/docs/components/modal"
+            },
+            {
+              "text": "Pagination",
+              "url": "/docs/components/pagination"
+            },
+            {
+              "text": "Progress",
+              "url": "/docs/components/progress"
+            },
+            {
+              "text": "Select",
+              "url": "/docs/components/select"
+            },
+            {
+              "text": "Radio",
+              "url": "/docs/components/radio"
+            }
+        ]
+    }
+]

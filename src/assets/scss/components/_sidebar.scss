@@ -1,0 +1,108 @@
+.sidebar-wrapper {
+    z-index:2;
+    transition: all .2s;
+    width: 270px;
+    @apply h-full min-h-screen shadow-sm fixed top-0 left-0 bg-white  duration-500  overflow-hidden;
+    &.is-sidebar-active {
+        left: 0;
+    }
+    //ini kenapa ya gw lihat sama aja soalnya, emang. layarnya keciill nerrr
+    //terus ini mau kamu apain
+    // mau tanya di fb , tapi gatau grup css yg jago apa
+    // coba jelasin dlu ke aku ini salahnya dimana , soalnya aku liat uinya sama aja
+    // susah jelasinnya. lewat telp aja kalo gak
+    //oke
+    &.is-sidebar-hidden {
+        left: -270px;
+    }
+    &.is-sidebar-hidden ~ #content {
+        padding-left: 0;
+    }
+    .sidebar-header {
+        @apply my-8;
+        .logo {
+            img {
+                @apply h-16 mx-auto w-24
+            }
+        }
+    }
+    .sidebar-menu {
+        ul {
+            li {
+                overflow: hidden;
+                a {
+                    @apply block px-5 py-3 font-normal text-gray-800 text-sm;
+                    letter-spacing:1px;
+                    color: #4c4f53;
+                    &:hover {
+                        @apply text-blue-700 transition duration-150
+                    }
+                    i {
+                        width: 20px;
+                        text-align: center;
+                    }
+                    span {
+                        @apply ml-4
+                    }
+                
+                }
+                &.active {
+                    a {
+                        color: map-get($theme-colors, 'link')
+                    }
+                }
+                &.sidebar-title {
+                    @apply px-5 uppercase text-sm font-normal text-gray-600 tracking-wider mb-3 mt-5;
+                }
+                &.has-sub{
+                    @apply relative;
+                    
+                    & > a:after {
+                        content: "\f078";
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        position: absolute;
+                        top: 23px;
+                        right: 20px;
+                        -webkit-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                        font-size: 10px;
+                    }
+                    .submenu-wrapper {
+                        overflow: hidden;
+                    }
+                    .submenu {
+                        &.active {
+                            height: 0;
+                        }
+                        li a {
+                            padding-left: 62px;
+                            font-size: 13px;
+                            @apply text-gray-600;
+                            &:hover {
+                                @apply text-blue-700 transition duration-150
+                            }
+                            &.router-link-active {
+                                color: map-get($theme-colors, 'link')
+                            }
+                        }
+                        // &.active {
+                        //     display:block;
+                        // }
+                        // &:not(.active) {
+                        //     display:none;
+                        // }
+                    }
+                } 
+            }
+        }
+    }
+}
+.scroll-area {
+    height: 100vh;
+}
+@media screen and (max-width: 767px) {
+    .sidebar-wrapper {
+        left: -270px;
+    }
+}
