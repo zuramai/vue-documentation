@@ -1,0 +1,24 @@
+
+a {
+    transition: all .3s ease;
+    position: relative;
+}
+.navbar {
+    flex: 1;
+}
+.title {
+    padding-top: 5px;
+}
+.section:before {
+    content: "#";
+    font-weight: 400;
+    margin-left: -25px;
+    margin-top: -5px;
+    font-size: 2rem;
+    color: #ff2d20;
+    position: absolute;
+    opacity: .6;
+}
+code {
+    white-space: pre-wrap;
+}

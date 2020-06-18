@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <div class="flex flex-row min-h-screen">
         <div class="sidebar-wrapper">
-          <div class="sidebar h-screen overflow-hidden flex flex-col">
+          <div class="sidebar h-screen overflow-hidden flex flex-col sticky top-0">
               <div class="logo flex flex-row py-8 items-center">
                 <a href="#" class="logo block py-5 flex flex-col">
                 <img alt="Vue logo" src="@/assets/logo.png" class='w-12'/>
@@ -28,11 +28,13 @@
             </VuePerfectScrollbar>
           </div>
         </div>
-        <div class="main-content pl-16 flex flex-col flex-1">
+        <div class="main-content px-16 flex flex-col flex-grow">
           <div class="content-header my-5">
             <input type="text" class='border-b px-4 py-2 w-full' placeholder="Search..">
           </div>
-          <router-view />
+          <transition name="slide-fade">
+            <router-view />
+          </transition>
         </div>
       </div>
     </div>
@@ -41,6 +43,7 @@
 <script>
 import sidebarMenuItems from "./sidebarItems.json";
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
+
 
 export default {
   mounted() {

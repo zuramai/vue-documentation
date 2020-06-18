@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import './assets/scss/app.scss';
-
+import "vue-code-highlight/themes/prism.css";
 Vue.config.productionTip = false;
 
 // Components
@@ -25,7 +25,9 @@ import KaitModal from './components/Modal/KaitModal.vue'
 import KaitPagination from './components/Pagination/KaitPagination.vue'
 import KaitRadio from './components/Radio/KaitRadio.vue'
 import KaitSelect from './components/Select/KaitSelect.vue'
+import DocsP from './components/DocsP.vue'
 
+import CodeHighlight from "vue-code-highlight/src/CodeHighlight.vue";
 
 Vue.component('kait-avatar', KaitAvatar)
 Vue.component('kait-card', KaitCard)
@@ -45,6 +47,9 @@ Vue.component('kait-modal', KaitModal)
 Vue.component('kait-pagination', KaitPagination)
 Vue.component('kait-radio', KaitRadio)
 Vue.component('kait-select', KaitSelect)
+Vue.component('docs-p', DocsP)
+Vue.component('code-highlight', CodeHighlight)
+
 new Vue({
   router,
   store,

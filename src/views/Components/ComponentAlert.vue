@@ -1,95 +1,133 @@
 <template>
-    <div class='main-content'>
-        <div class="page-header">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Alert</h3>
-                </div>
-                <div class="breadcrumb">
+  <div class="home pt-16">
+    <section class='mb-5'>
+      <h1 class="title text-4xl font-semibold text-gray-800" id="introduction">
+        <a href="#introduction">Alert</a>
+      </h1>
+        <p class='text-content mt-2 text-sm text-gray-800'>Notifications to the user at execution time with good animation and functionality</p>
 
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <kait-card>
-                    <kait-card-header>Default Alert</kait-card-header>
-                    <kait-card-body>
-                        <p class='mb-4'>Use <code>color="colorname"</code> attributes to choose alert variant.</p>
-                        <kait-alert color="primary">This is a primary alert.</kait-alert>
-                        <kait-alert color='secondary'>This is a secondary alert.</kait-alert>
-                        <kait-alert color='success'>This is a success alert.</kait-alert>
-                        <kait-alert color='danger'>This is a danger alert.</kait-alert>
-                        <kait-alert color='warning'>This is a warning alert.</kait-alert>
-                        <kait-alert color='info'>This is a info alert.</kait-alert>
-                        <kait-alert color='light'>This is a light alert.</kait-alert>
-                        <kait-alert color='dark'>This is a dark alert.</kait-alert>
-                    </kait-card-body>
-                </kait-card>
-                <kait-card>
-                    <kait-card-header>Dismissable</kait-card-header>
-                    <kait-card-body>
-                        <p class='mb-4'>Use <code>dismissable="true"</code> attributes to activate dismissable button.</p>
-                        <kait-alert color='primary' :dismissable='true'>This is a primary alert.</kait-alert>
-                        <kait-alert color='secondary' :dismissable='true'>This is a secondary alert.</kait-alert>
-                        <kait-alert color='success' :dismissable='true'>This is a success alert.</kait-alert>
-                        <kait-alert color='danger' :dismissable='true'>This is a danger alert.</kait-alert>
-                        <kait-alert color='warning' :dismissable='true'>This is a warning alert.</kait-alert>
-                        <kait-alert color='info' :dismissable='true'>This is a info alert.</kait-alert>
-                        <kait-alert color='light' :dismissable='true'>This is a light alert.</kait-alert>
-                        <kait-alert color='dark' :dismissable='true'>This is a dark alert.</kait-alert>
-                    </kait-card-body>
-                </kait-card>
-            </div>
-            <div class="col-md-6 col-12">
-                <kait-card>
-                    <kait-card-header>Title</kait-card-header>
-                    <kait-card-body>
-                        <p class='mb-4'>Use <code>title="your title"</code> attributes to add title.</p>
-                        <kait-alert color="primary" title="Primary">This is a primary alert.</kait-alert>
-                        <kait-alert color="secondary" title="Secondary">This is a secondary alert.</kait-alert>
-                        <kait-alert color="success" title="Success">This is a success alert.</kait-alert>
-                        <kait-alert color="danger" title="Danger">This is a danger alert.</kait-alert>
-                        <kait-alert color="warning" title="Warning">This is a warning alert.</kait-alert>
-                        <kait-alert color="info" title="Info">This is a info alert.</kait-alert>
-                        <kait-alert color="light" title="Light">This is a light alert.</kait-alert>
-                        <kait-alert color="dark" title="Dark">This is a dark alert.</kait-alert>
-                    </kait-card-body>
-                </kait-card>
-                <kait-card>
-                    <kait-card-header>With Icon</kait-card-header>
-                    <kait-card-body>
-                        <p class='mb-4'>Use <code>icon="your-icon-class"</code> attributes to add icon.</p>
-                        <kait-alert color='primary' icon="fas fa-check-circle">This is a primary alert.</kait-alert>
-                        <kait-alert color='secondary' icon="fas fa-check-circle">This is a secondary alert.</kait-alert>
-                        <kait-alert color='success' icon="fas fa-check-circle">This is a success alert.</kait-alert>
-                        <kait-alert color='danger' icon="fas fa-check-circle">This is a danger alert.</kait-alert>
-                        <kait-alert color='warning' icon="fas fa-check-circle">This is a warning alert.</kait-alert>
-                        <kait-alert color='info' icon="fas fa-check-circle">This is a info alert.</kait-alert>
-                        <kait-alert color='light' icon="fas fa-check-circle">This is a light alert.</kait-alert>
-                        <kait-alert color='dark' icon="fas fa-check-circle">This is a dark alert.</kait-alert>
-                    </kait-card-body>
-                </kait-card>
-            </div>
-        </div>
-    </div>
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="color"><a href="#color">Color</a></h3>
+
+            <docs-p class='mb-4'>You can change the color of the alert with the property color. You are able to use the Main Colors or RGB and HEX colors.</docs-p>
+            <kait-alert color="primary">This is a primary alert.</kait-alert>
+            <code-highlight language="html">
+                <pre v-text="color"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="color"><a href="#color">Dismissable</a></h3>
+
+            <docs-p class='mb-4'>You can change make the alert become dismissable with the property dismissable. </docs-p>
+            <kait-alert color="primary" :dismissable="true">You can dismiss this alert.</kait-alert>
+            <code-highlight language="html">
+                <pre v-text="dismissable"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="title"><a href="#title">Title</a></h3>
+
+            <docs-p class='mb-4'>You can change the title of the alert with the property title. </docs-p>
+            <kait-alert color="success" title="Success">This is a success alert.</kait-alert>
+            <code-highlight language="html">
+                <pre v-text="title"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="icon"><a href="#icon">Icon</a></h3>
+
+            <docs-p class='mb-4'>You can change the icon of the alert with the property title. You can use the icon class.</docs-p>
+            <kait-alert color='danger' icon="fas fa-exclamation-circle">Error! Please check your username and password.</kait-alert>
+            <code-highlight language="html">
+                <pre v-text="icon"></pre>
+            </code-highlight>
+        </section>
+        
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800 mb-5' id="icon"><a href="#icon">API</a></h3>
+            <kait-table type="striped" :responsive="true">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Parameter</th>
+                  <th>Description</th>
+                  <th>Default</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(api, index) in apis" :key="index">
+                  <td>{{ api.name }}</td>
+                  <td>{{ api.type }}</td>
+                  <td>{{ api.parameter }}</td>
+                  <td>{{ api.desc }}</td>
+                  <td>{{ api.default }}</td>
+                </tr>
+              </tbody>
+            </kait-table>
+        </section>
+        
+            
+    </section>
+  </div>
 </template>
+
 <script>
 import 'vue-waves-effect/dist/vueWavesEffect.css'
 
 export default {
+    mounted() {
+        console.log('alert')
+    },
     data() {
         return {
-            dismissable: {
-                primary: true,
-                secondary: true,
-                warning: true,
-                danger: true,
-                success: true,
-                light: true,
-                dark: true,
-                info: true,
-            }
+            color:'<kait-alert color="primary">This is a primary alert.</kait-alert>',
+            title: '<kait-alert color="success" title="Success">This is a success alert.</kait-alert>',
+            icon: '<kait-alert color="danger" icon="fas fa-exclamation-circle">Error! Please check your username and password.</kait-alert>',
+            dismissable: '<kait-alert color="primary" :dismissable="true">You can dismiss this alert.</kait-alert>',
+            dismissed: false,
+
+            apis: [
+              {
+                name: 'color',
+                type: 'String',
+                parameter: 'primary,success,danger,warning,dark,info',
+                desc: 'Background color of the alert',
+                default: 'primary',
+              },
+              {
+                name: 'title',
+                type: 'String',
+                parameter: '',
+                desc: 'Title of the alert',
+                default: '',
+              },
+              {
+                name: 'dismissable',
+                type: 'String',
+                parameter: '',
+                desc: 'Title of the alert',
+                default: '',
+              },
+              {
+                name: 'icon',
+                type: 'String',
+                parameter: '',
+                desc: 'Title of the alert',
+                default: '',
+              },
+              {
+                name: '@onClose',
+                type: 'event',
+                parameter: '',
+                desc: 'Emitted when alert dismissed',
+                default: '',
+              },
+            ]
         }
     }
 }

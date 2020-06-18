@@ -19,7 +19,7 @@ const routes = [
         component: () => import("./../views/Integration/Laravel.vue"),
       },
       {
-        path: "/components/alert",
+        path: "/docs/components/alert",
         name: "components.alert",
         component: () => import("../views/Components/ComponentAlert.vue"),
         meta: {
@@ -27,7 +27,7 @@ const routes = [
         },
       },
       {
-        path: "/components/avatar",
+        path: "/docs/components/avatar",
         name: "components.avatar",
         component: () => import("../views/Components/ComponentAvatar.vue"),
         meta: {
@@ -35,7 +35,7 @@ const routes = [
         },
       },
       {
-        path: "/components/buttons",
+        path: "/docs/components/buttons",
         name: "components.buttons",
         component: () => import("../views/Components/ComponentButton.vue"),
         meta: {
@@ -43,7 +43,7 @@ const routes = [
         },
       },
       {
-        path: "/components/badge",
+        path: "/docs/components/badge",
         name: "components.badge",
         component: () => import("../views/Components/ComponentBadge.vue"),
         meta: {
@@ -51,7 +51,7 @@ const routes = [
         },
       },
       {
-        path: "/components/breadcrumb",
+        path: "/docs/components/breadcrumb",
         name: "components.breadcrumb",
         component: () => import("../views/Components/ComponentBreadcrumb.vue"),
         meta: {
@@ -59,52 +59,56 @@ const routes = [
         },
       },
       {
-        path: "/components/card",
+        path: "/docs/components/card",
         name: "components.card",
         component: () => import("../views/Components/ComponentCard.vue"),
       },
       {
-        path: "/components/checkbox",
+        path: "/docs/components/checkbox",
         name: "components.checkbox",
         component: () => import("../views/Components/ComponentCheckbox.vue"),
       },
       {
-        path: "/components/dropdown",
+        path: "/docs/components/dropdown",
         name: "components.dropdown",
         component: () => import("../views/Components/ComponentDropdown.vue"),
       },
       {
-        path: "/components/input",
+        path: "/docs/components/input",
         name: "components.input",
         component: () => import("../views/Components/ComponentInput.vue"),
       },
       {
-        path: "/components/modal",
+        path: "/docs/components/modal",
         name: "components.modal",
         component: () => import("../views/Components/ComponentModal.vue"),
       },
       {
-        path: "/components/pagination",
+        path: "/docs/components/pagination",
         name: "components.pagination",
         component: () => import("../views/Components/ComponentPagination.vue"),
       },
       {
-        path: "/components/progress",
+        path: "/docs/components/progress",
         name: "components.progress",
         component: () => import("../views/Components/ComponentProgress.vue"),
       },
       {
-        path: "/components/select",
+        path: "/docs/components/select",
         name: "components.select",
         component: () => import("../views/Components/ComponentSelect.vue"),
       },
       {
-        path: "/components/radio",
+        path: "/docs/components/radio",
         name: "components.radio",
         component: () => import("../views/Components/ComponentRadio.vue"),
       },
     ],
   },
+  {
+    path:"*",
+    component: () => import('./../views/Errors/404.vue')
+  }
 ];
 
 const router = new VueRouter({
