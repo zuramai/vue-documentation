@@ -28,13 +28,15 @@
             </VuePerfectScrollbar>
           </div>
         </div>
-        <div class="main-content px-16 flex flex-col flex-grow">
-          <div class="content-header my-5">
-            <input type="text" class='border-b px-4 py-2 w-full' placeholder="Search..">
+        <div class="main-content px-16 flex flex-col flex-1 overflow-auto">
+          <div class="block">
+            <div class="content-header my-5">
+              <input type="text" class='border-b px-4 py-2 w-full' placeholder="Search..">
+            </div>
+            <transition name="slide-fade">
+              <router-view />
+            </transition>
           </div>
-          <transition name="slide-fade">
-            <router-view />
-          </transition>
         </div>
       </div>
     </div>
