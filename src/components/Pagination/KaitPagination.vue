@@ -1,5 +1,5 @@
 <template>
-    <div class='kait-component flex'>
+    <div class='kait-component flex mt-4'>
         <div :class="{'kait-pagination flex justify-between': true, 'ml-auto': float=='right'}">
             <div :class="{'kait-pagination-prev bg-gray-300 px-3 py-2 rounded-tl-md rounded-bl-md hover:text-white cursor-pointer transition duration-300':true, 'mr-2': type=='simple', [`hover:bg-${color}`]: true}" @click="updateValue('min')"><i class="fas fa-chevron-left"></i></div>
             <div class="kait-pagination-numbers inline-flex mx-2" v-if="type!=='simple'">

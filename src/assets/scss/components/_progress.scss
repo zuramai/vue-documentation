@@ -1,5 +1,5 @@
 
-
+@import "./../variables";
 $progress: (
 	"primary": map-get($theme-colors, 'primary'),
 	"secondary": map-get($theme-colors, 'secondary'),

@@ -1,0 +1,43 @@
+.no-pad {
+    @apply p-0;
+}
+.text-white-50 {
+    color: rgba(255,255,255,.5);
+}
+.opacity-8 {
+    opacity: 0.8;
+}
+.w-6\/100 {
+    width: 6%;
+}
+.w-94\/100 {
+    width: 94%;
+}
+.w-3\/10 {
+    width: 30%;
+}
+.w-7\/10 {
+    width: 70%;
+}
+
+@each $color-name, $value in $theme-colors {
+    .bg-#{$color-name} {
+        background-color: $value;
+    }
+    .hover\:bg-#{$color-name}:hover {
+        background-color: $value;
+    }
+    .hover\:text-#{$color-name}:hover {
+        color: $value;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .md\:w-3\/10 {
+        width: 30%;
+    }
+    .md\:w-7\/10 {
+        width: 70%;
+    }
+   
+}

@@ -1,82 +1,85 @@
 <template>
-    <div class='main-content'>
-        <div class="page-header">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Input</h3>
-                </div>
-                <div class="breadcrumb">
+  <div class="home pt-16">
+    <section class='mb-5'>
+      <h1 class="title text-4xl font-semibold text-gray-800" id="input">
+        <a href="#input">Input</a>
+      </h1>
+        <p class='text-content mt-2 text-sm text-gray-800'>The avatar image for user</p>
 
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <kait-card>
-                    <kait-card-header>Default Input</kait-card-header>
-                    <kait-card-body>
-                        <kait-input placeholder="Placeholder"/>
-                        <kait-input placeholder="Disabled" disabled/>
-                    </kait-card-body>
-                </kait-card>
-                <kait-card>
-                    <kait-card-header>Label Placeholder</kait-card-header>
-                    <kait-card-body class='flex'>
-                        <div class="w-1/2 pr-2">
-                            <kait-input label-placeholder="Username" />
-                        </div>
-                        <div class="w-1/2">
-                            <kait-input label-placeholder="Password"/>
-                        </div>
-                    </kait-card-body>
-                </kait-card>
-                <kait-card>
-                    <kait-card-header>Icon</kait-card-header>
-                    <kait-card-body class='flex'>
-                        <div class="w-1/2 pr-2">
-                            <kait-input label-placeholder="Username" icon="fas fa-user"/>
-                        </div>
-                        <div class="w-1/2">
-                            <kait-input label-placeholder="Password" icon="fas fa-lock" type="password" color="danger"/>
-                        </div>
-                    </kait-card-body>
-                </kait-card>
-            </div>
-            <div class="col-md-6 col-12">
-                <kait-card>
-                    <kait-card-header>Label</kait-card-header>
-                    <kait-card-body>
-                        <kait-input label="Username"/>
-                        <kait-input label="Password"/>
-                    </kait-card-body>
-                </kait-card>
-                <kait-card>
-                    <kait-card-header>Color</kait-card-header>
-                    <kait-card-body>
-                        <div class="flex">
-                            <div class="w-1/3 pr-2">
-                                <kait-input label="Primary" color="primary"/>
-                            </div>
-                            <div class="w-1/3 pr-2">
-                                <kait-input label="Success" color="success"/>
-                            </div>
-                            <div class="w-1/3">
-                                <kait-input label="Danger" color="danger"/>
-                            </div>
-                        </div>
-                        <div class="flex">
-                            <div class="w-1/2 pr-2">
-                                <kait-input label="Warning" color="warning"/>
-                            </div>
-                            <div class="w-1/2">
-                                <kait-input label="Dark" color="dark"/>
-                            </div>
-                        </div>
-                    </kait-card-body>
-                </kait-card>
-            </div>
-        </div>
-    </div>
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="color"><a href="#default">Default</a></h3>
+
+            <docs-p class='mb-4'>Input with placeholder</docs-p>
+            <kait-input placeholder="Placeholder"/>
+            <kait-input placeholder="Disabled" disabled/>
+            <code-highlight language="html">
+                <pre v-text="placeholder"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="label"><a href="#label">Label </a></h3>
+            <docs-p class='mb-4'>Display the label for input</docs-p>
+            <kait-input label="Placeholder" class='mb-5'/>
+            <code-highlight language="html">
+                <pre v-text="label"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="label-placeholder"><a href="#label-placeholder">Label Placeholder</a></h3>
+            <docs-p class='mb-4'>Placeholder will become a top label on focus</docs-p>
+            <kait-input label-placeholder="Placeholder" class='mt-8'/>
+            <code-highlight language="html">
+                <pre v-text="labelPlaceholder"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="with-icon"><a href="#with-icon">With Icon</a></h3>
+            <docs-p class='mb-4'>You can add an icon before the input</docs-p>
+            <kait-input placeholder="Password" icon="fas fa-lock"/>
+            <code-highlight language="html">
+                <pre v-text="icon"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800' id="color"><a href="#color">Color</a></h3>
+            <docs-p class='mb-4'>You can change the input color</docs-p>
+            <kait-input placeholder="Im red" icon="fas fa-lock" color="danger"/>
+            <code-highlight language="html">
+                <pre v-text="color"></pre>
+            </code-highlight>
+        </section>
+
+        <section class='my-12'>
+            <h3 class='section text-2xl font-semibold text-gray-800 mb-5' id="icon"><a href="#icon">API</a></h3>
+            <kait-table type="striped" :responsive="true">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Parameter</th>
+                  <th>Description</th>
+                  <th>Default</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(api, index) in apis" :key="index">
+                  <td>{{ api.name }}</td>
+                  <td>{{ api.type }}</td>
+                  <td>{{ api.parameter }}</td>
+                  <td>{{ api.desc }}</td>
+                  <td>{{ api.default }}</td>
+                </tr>
+              </tbody>
+            </kait-table>
+        </section>
+        
+            
+    </section>
+  </div>
 </template>
 <script>
 import 'vue-waves-effect/dist/vueWavesEffect.css'
@@ -85,6 +88,77 @@ export default {
         return {
             showCard: true,
             dismissed: false,
+            placeholder: '<kait-input placeholder="Placeholder"/>\n\<kait-input placeholder="Disabled" disabled/>',
+            label: '<kait-input label="Placeholder" class="mb-5"/>',
+            labelPlaceholder: '<kait-input label-placeholder="Placeholder" class="mt-8"/>',
+            icon: '<kait-input placeholder="Password" icon="fas fa-lock"/>',
+            color: '<kait-input placeholder="Im red" icon="fas fa-lock" color="danger"/>',
+
+            apis: [
+                {
+                    name: 'v-model',
+                    type: 'String',
+                    parameter: '',
+                    desc: '',
+                    default: 'false',
+                },
+                {
+                    name: 'color',
+                    type: 'String',
+                    parameter: 'primary,secondary,warning,danger,success,dark',
+                    desc: '',
+                    default: 'false',
+                },
+                {
+                    name: 'disabled',
+                    type: 'Boolean',
+                    parameter: '',
+                    desc: 'disable the input ',
+                    default: 'false',
+                },
+                {
+                    name: 'placeholder',
+                    type: 'String',
+                    parameter: '',
+                    desc: '',
+                    default: '',
+                },
+                {
+                    name: 'label-placeholder',
+                    type: 'String',
+                    parameter: '',
+                    desc: 'placeholder that will become a label',
+                    default: '',
+                },
+                {
+                    name: 'icon',
+                    type: 'String',
+                    parameter: '',
+                    desc: 'you can use icon class ',
+                    default: '',
+                },
+                {
+                    name: 'type',
+                    type: 'String',
+                    parameter: 'text,email,number,password',
+                    desc: 'the input type',
+                    default: 'text',
+                },
+                {
+                    name: '@focus',
+                    type: 'Event',
+                    parameter: '',
+                    desc: 'Emitted when input on focus',
+                    default: '',
+                },
+                {
+                    name: '@blur',
+                    type: 'Event',
+                    parameter: '',
+                    desc: 'Emitted when user leave the input',
+                    default: '',
+                },
+            ]
         }
     },
     methods: {

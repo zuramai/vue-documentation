@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 
+@import "./variables";
 @import "./sidebar";
 
 @import "./docs";
@@ -9,4 +10,5 @@
 @import "./responsive";
 
 @tailwind utilities;
+@import "./utilities";
 
