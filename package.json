@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "highlight.js": "^10.1.0",
+    "highlight.js": "^10.4.1",
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.11",
     "vue-code-highlight": "^0.7.4",
